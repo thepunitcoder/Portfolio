@@ -1,0 +1,11 @@
+/* .grid:nth-child(1){
+    /* position: relative; */
+ */
+
+.text{
+    height: 200px;
+    width: 100;
+    background-color: blanchedalmond;
+    bottom: 100px;
+    position: absolute;
+}

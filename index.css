@@ -8,7 +8,8 @@
     outline: none;
 }
 body{
-    background-color: black;
+    background-image: linear-gradient(90deg,black, purple,black);
+    /* overflow: hidden; */
 }
 
 section{
@@ -36,14 +37,15 @@ button{
     justify-content: space-between;
     align-items: center;
     padding: 10px 100px;
-    height: 60px;
     background-color: black;
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 .header h1, a{
     color: white;
     margin-right:30px ;
+    /* transition: 0.3s ease; */
 
 }
 .div1{
@@ -108,7 +110,8 @@ button{
     flex: 1 1 33.3rem;
     flex-direction: column;
     padding: 40px;
-    background-color: rgb(114, 104, 124);
+    background-image: linear-gradient(90deg,black, purple,black);
+
     border-radius: 20px;
 }
 
@@ -121,9 +124,9 @@ button{
     justify-content: center;
 }
 
-.grid div{
+.grid .layer{
     /* border: 1px solid white; */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     margin-top: 15px;
 }
 
@@ -140,10 +143,7 @@ button{
     border-radius: 20px;
 
 }
-.div4 h1{
-    display: flex;
-    justify-content: ;
-}
+
 
 .div4 h1{
     justify-content: center;
@@ -176,6 +176,39 @@ button{
     color: black;
 }
 
+.text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 0.6s ease;
+    background-color:black;
+    transform: translateY(-10%);
+
+}
+.layer p{
+    margin: 5px 0px 5px 0px ;
+}
+
+.layer{
+    overflow: hidden;
+}
+
+.layer:hover .text{
+    opacity: 0.8;
+    transform: translateY(-50%);
+}
+
+.header h1:hover{
+    filter: drop-shadow(0px 0px 10px red);
+}
+.header a:hover{
+    filter: drop-shadow(0px 0px 5px red);
+}
+
+
 #menu{
     display: none;
 }
@@ -187,6 +220,11 @@ button{
 
     nav{
         display: none;
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        top: 50px;
+        background: #000;
     }
 
     .div1{
@@ -198,9 +236,7 @@ button{
         display: flex;
         flex-direction: column-reverse;
     }
-    body{
-        /* overflow-x: hidden ; */
-    }
+    
     .div5{
         display: flex;
         flex-direction: column;
@@ -218,4 +254,12 @@ button{
     padding: 10px;
    }
     
+}
+
+.div4 img:hover{
+    scale: 1.2;
+}
+
+.div4 img{
+    transition: 0.5s linear;
 }
